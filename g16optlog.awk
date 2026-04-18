@@ -15,7 +15,7 @@ if (NF == 2 && $1 == "Symbolic" && $2 == "Z-matrix:")
 if (NF == 6 && $1 == "Rotational" && $2 == "temperatures" && $3 == "(Kelvin)")
 {
     thermalflag = 1;
-    elementsend = elementsstart + coordinatesend - coordinatesstart
+    elementsend = elementsstart + coordinatesend - coordinatesstart;
 }
 if (NF == 2 && $1 == "Standard" && $2 == "orientation:")
     coordinatesstart = FNR + 5;
