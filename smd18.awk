@@ -12,7 +12,7 @@ if (flag1 > 0 && FNR > flag1 + 4 && NF != 4 && flag2 > 0)
     flag3 = FNR - 1;
     nextfile;
 }
-if ($1 == "#P")
+if (substr($1,1,1) == "#")
     flag1 = FNR;
 }
 
