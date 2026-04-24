@@ -34,14 +34,14 @@ if (FNR < flag2)
         if ((m=="") && (m==0))
             print $0;
         else
-            printf("%mem=%dGB\n", m);
+            printf("%%mem=%dGB\n", m);
     }
     else if (substr($1,1,12) == "%nprocshared")
     {
         if ((n=="") && (n==0))
             print $0;
         else
-            printf("%nprocshared=%d\n", n);
+            printf("%%nprocshared=%d\n", n);
     }
     else
         print $0;
