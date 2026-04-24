@@ -21,6 +21,20 @@ if (FNR < flag2)
 {
     if (FNR == flag1)
         printf("#P M06/genecp scrf(SMD,solvent=n,n-DiMethylFormamide,read)\n");
+    else if (substr($1,1,4) == "%mem")
+    {
+        if ((m=="") && (m==0))
+            print $0;
+        else
+            printf("%mem=%dGB\n", m);
+    }
+    else if (substr($1,1,12) == "%nprocshared")
+    {
+        if ((n=="") && (n==0))
+            print $0;
+        else
+            printf("%nprocshared=%d\n", n);
+    }
     else
         print $0;
 }
