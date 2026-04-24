@@ -1,3 +1,11 @@
+# This script is expected to modify Gaussian input files for SMD18 calculation.
+# If you do not want to modify memory requirements or specify number of proces-
+# sors, you can run the following command:
+# awk -f smd18.awk input.com input.com
+# If you want to set the memory as 256 GB and require 64 cores, you can run the
+# following command:
+# awk -f smd18.awk -v m=256 -v n=64 input.com input.com
+
 BEGIN {
 flag1 = 0;
 flag2 = 0;
